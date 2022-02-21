@@ -30,7 +30,6 @@ const App = () => {
       let res = tempData.stateTable.sort(
         (a, b) => b.new_active - a.new_active
       )[0];
-      console.log(res);
       setHighState(res);
     }
   }, [data]);
@@ -39,7 +38,6 @@ const App = () => {
     let [selectedState] = data.stateTable.filter(
       (item) => item.state_name && item.state_name.toLowerCase().includes(id)
     );
-    console.log(selectedState);
     if (!!selectedState) {
       let divElem = document.getElementById("info-box");
       divElem.innerHTML = `<p>State: ${selectedState.state_name}</p><p>New Active: ${selectedState.new_active}</p>`;
@@ -51,6 +49,9 @@ const App = () => {
       <img className="image" src={coronaImage} alt="COVID-19" />
       <h2>India and State Wise Cases of Corona Virus</h2>
       <Cards data={data?.covidData} />
+      <h3 style={{ color: "blue" }}>
+        ** Tap on the Map to view state-wise covid cases **
+      </h3>
       <Card>
         {
           <div id="info-box" className="info-box">

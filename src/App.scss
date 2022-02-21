@@ -6,11 +6,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #ededed;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+.ant-card-body {
+  box-shadow: 1px 1px 6px lightsteelblue;
 }
 .image {
   width: 370px;
