@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Card, Statistic } from "antd";
 import { ArrowUpOutlined, ArrowDownOutlined } from "@ant-design/icons";
 import "./index.scss";

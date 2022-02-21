@@ -6,7 +6,7 @@ import StateTable from "./sharedComponents/Table";
 import { Map } from "./map";
 import axios from "axios";
 import coronaImage from "./images/image.png";
-import { cloneDeep, isNull } from "lodash";
+import { cloneDeep } from "lodash";
 
 const App = () => {
   const [data, setData] = useState([]);
@@ -18,7 +18,6 @@ const App = () => {
     axios
       .get("https://calm-ocean-08446.herokuapp.com/")
       .then(({ data }) => {
-        // message.success("Data fetched successfully");
         setData(data);
       })
       .catch((err) => message.error("Failed to Fetch the records from server"))
