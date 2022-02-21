@@ -16,7 +16,7 @@ const App = () => {
   useEffect(() => {
     setIsLoading(true);
     axios
-      .get("http://localhost:4000/")
+      .get("https://calm-ocean-08446.herokuapp.com/")
       .then(({ data }) => {
         // message.success("Data fetched successfully");
         setData(data);
